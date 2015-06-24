@@ -1,0 +1,16 @@
+{
+  "name": "ywca-workspace",
+  "version": "0.0.1",
+  "description": "YWCA Workspace for Maria Pichon",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MariaPichon/ywebca.git"
+  },
+  "author": {
+    "name": "Maria Pichon",
+    "email": "mariapichon4@gmail.com",
+    "url": "https://github.com/MariaPichon"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
