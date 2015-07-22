@@ -10,7 +10,9 @@
 //==============================//
 Exer.defining1 = function () {  //
 //==============================//
-
+var three = function(x){
+  return 3
+}
 
 
 };  // end Exer.defining1
@@ -23,6 +25,9 @@ Exer.defining1 = function () {  //
 //==============================//
 Exer.defining2 = function () {  //
 //==============================//
+var myLog= function(message){
+  console.log("The Log Says: "+ message);
+};
 
 
 
@@ -35,8 +40,11 @@ Exer.defining2 = function () {  //
 //==============================//
 Exer.defining3 = function () {  //
 //==============================//
-
-
+var square = function(number){
+var result = number * number;
+console.log(number * number);
+return result;
+}
 
 };  // end Exer.defining3
 
@@ -53,7 +61,13 @@ Exer.defining3 = function () {  //
 //===============================//
 Exer.parameters1 = function() {  //
 //===============================//
-
+var spaceCubeDetector = function(length, width, height){
+  if (length == width == height)
+    console.log("SPACE CUBE DETECTED!!");
+  else
+    console.log("THIS IS NO SPACE CUBE!");
+  return spaceCubeDetector;
+};
 
 
  };  // end Exer.parameters1
@@ -112,11 +126,11 @@ Exer.scopeExample = function() {
 //  Write your answers in this section
 
 Exer.scope1 = function() {
-  return /* return value for Scope 1 */ ;
+  return 5 ;
 };
 
 Exer.scope2 = function() {
-  return /* return value for Scope 2 */ ;
+  return 35 ;
 };
 
 Exer.scope3 = function() {
