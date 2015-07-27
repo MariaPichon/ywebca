@@ -1,5 +1,7 @@
 body{
   background-color: #666666;
+  background-image: url();
+  font-family: 'Indie Flower', cursive;
 }
 header{
   background-image: url('http://www.bhmpics.com/walls/planets_and_moons_in_universe-wide.jpg');
@@ -21,6 +23,7 @@ nav li{
 h1{
   text-align: center;
   color: #FFFFFF;
+  font-size: 300%
 }
 .AboutMe{
   color: #FE99CE;
@@ -119,9 +122,8 @@ section .link{
   color: #FFFFFF;
   font-size: 20px;
   background-color: #666666;
-  border: 10px solid #000000;
-  margin: 50px auto 0 auto;
   width: 110px;
+  background-position: bottom right;
 }
 img{
   background-color: #AAAAAA;
@@ -129,4 +131,7 @@ img{
   margin: 0 auto 0 auto;
   width: 440px;
   height: 300px;
+}
+.about{
+  background-color: #AAAAAA
 }
