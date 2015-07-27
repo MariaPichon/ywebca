@@ -4,7 +4,7 @@ body{
   font-family: 'Indie Flower', cursive;
 }
 header{
-  background-image: url('http://www.bhmpics.com/walls/planets_and_moons_in_universe-wide.jpg');
+  background-image: url('http://25.media.tumblr.com/tumblr_m7cu2tgaRh1rau7xjo1_1280.jpg');
   background-size: cover;
   padding: 10px auto 0 auto;
   margin: 0;
@@ -134,4 +134,28 @@ img{
 }
 .about{
   background-color: #AAAAAA
+}
+.projects{
+  width: 440px;
+  margin: 0 auto 0 auto;
+}
+.contact{
+  background-color: #AAAAAA;
+  border: 10px solid #AAAAAA;
+  margin: 50px auto 50px auto;
+  width: 900px;
+  text-align: center;
+}
+.socialmedia img{
+  width: 50px;
+  height: 50px;
+}
+.socialmedia{
+  margin: 40px 5px 40px 5px;
+}
+.map{
+  width: 70%;
+  background-color: #DDDDDD;
+  border: 10px solid #DDDDDD;
+  margin:0 auto 50px 150px;
 }

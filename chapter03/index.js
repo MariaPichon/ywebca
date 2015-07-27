@@ -227,7 +227,7 @@ Exer.nestExample = function() {
 Exer.nest1 = function() {
   return 2;
 };
-Exer.nest2 = function() {
+Exer.nest2 = function() { //me
   return  5;
 };
 Exer.nest3 = function() {
@@ -263,7 +263,7 @@ Exer.nest12 = function() {
 Exer.nest13 = function() {
   return 0;
 };
-Exer.nest14 = function() {
+Exer.nest14 = function() { 
   return 0;
 };
 Exer.nest15 = function() {
@@ -325,7 +325,7 @@ Exer.declaration1 = function () {  //
 //=================================//
 function testNinja() {
   console.log("You gotta believe!");
-};
+}
 return testNinja;
 
 };  // end Exer.declaration1
@@ -391,13 +391,14 @@ Exer.stack2 = function ( jack ) {  //
 jack.pop();
 jack.pop();
 jack.push('breadfruit');
-console.log();
+console.log(2);
 jack.push('strawberry', 'durian');
-var pan = jack.pop();
-jack.push(pan);
-console.log(jack);
+jack.pop();
+jack.push('durian')
+console.log('durian');
 console.log(3);
 return jack;
+
 
 };  // end Exer.stack2
 
@@ -419,9 +420,9 @@ return salutations;
 /*******************************    Optional 2    *******************************/
 // Call the function value we pass back to you with 4 arguments.
 //=================================//
-Exer.optional2 = function(exercise) {
+Exer.optional2 = function(exercise) { //me
 
-var salud = salutations('hello', 'how', 'are', 'you');
+exercise('hello', 'how', 'are', 'you');
 
 };
 
@@ -439,7 +440,17 @@ var salud = salutations('hello', 'how', 'are', 'you');
 //=================================//
 Exer.closures1 = function(spaceCubeDetector) {
 
-
+  var yes = function spaceCubeDetector(length, width) {
+    return function space(height) {
+      if(length == width && width == height) {
+        return "SPACE CUBE DETECTED!!";
+      }
+      else {
+        return "THIS IS NO SPACE CUBE!";
+      }
+    }
+  }
+  return yes;
 };
 
 /*******************************    Closures 2    *******************************/
@@ -452,6 +463,18 @@ Exer.closures1 = function(spaceCubeDetector) {
 //=================================//
 Exer.closures1 = function(spaceCubeDetector) {
 
+  spaceCubeDetector=function(length) {
+     return function(width) {
+       return function(height) {
+         if (height==length&&width==height) 
+           return "SPACE CUBE DETECTED!!";
+         else 
+           return "THIS IS NO SPACE CUBE!";
+       };
+     };
+
+   return spaceCubeDetector;
+
 };
 
 /*******************************************************************************
@@ -463,7 +486,18 @@ Exer.closures1 = function(spaceCubeDetector) {
 //=================================//
 Exer.recursion1 = function ( code, controller ) {
 
+  var game = function (code, controller) {
+    var current = code.curr();
+    controller(current);
 
+    if (code.next()) {
+      game(code, controller);
+    }
+  };
+
+  game(code, controller);
+
+};
 
 };
 
@@ -476,7 +510,17 @@ Exer.recursion1 = function ( code, controller ) {
 // parameter then call `puzzleBox.click`'s returned function value.
 //=================================//
 Exer.recursion2 = function(code, puzzleBox) {
+
+    var solve = function(puzzleBox) {
+    var twist=puzzleBox.click();
+    if (twist != undefined) {
+      solve(puzzleBox);
+      twist();
+    }
+  }
+  solve(puzzleBox);
 };
+
 
 /*******************************************************************************
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^    Growing Functions    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
